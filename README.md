@@ -5,7 +5,7 @@ image url(displaying as an image with Glide Library) and are stored locally on t
 
 You can delete or edit the note in the note list by dragging it to the left.
 
-Created notes contain the created date.
+Created notes contains the created date.
 
 Used clean architecture.
 
