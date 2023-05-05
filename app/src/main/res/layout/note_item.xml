@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_note_swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:show_mode="lay_down">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|end|center"
+        android:orientation="vertical"
+        tools:ignore="RtlHardcoded">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="0dp"
+            tools:ignore="RtlHardcoded">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:drawablePadding="4dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/delete_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/noteTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/noteImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Eve alınacaklar listesi" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/noteDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/noteImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteTitle"
+            tools:text="domates, biber, patlıcan, yumurta, ekmek, süt alınacak" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/noteImage"
+            android:layout_width="40dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/createdOrEditedDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/noteTitle"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/createdOrEditedDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteDescription"
+            tools:text="Created at 16.42" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/createdOrEditedDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.daimajia.swipe.SwipeLayout>

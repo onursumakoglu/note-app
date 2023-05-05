@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="no_note_text">You do not have any saved notes yet.</string>
+    <string name="description_text">Description</string>
+    <string name="image_url_text">Image URL</string>
+    <string name="title_text">Title</string>
+    <string name="delete_text">Delete</string>
+    <string name="alert_message">Are you sure you want to delete the note?</string>
+    <string name="alert_title">Warning</string>
+    <string name="new_note_text">New Note</string>
+    <string name="save_text">Save</string>
+    <string name="missing_title_warning">Please enter a title to save the note.</string>
+    <string name="note_saved_text">Note Saved</string>
+    <string name="created_text">Created at %1$s</string>
+</resources>
